@@ -9,6 +9,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 function App() {
   return (
     <div className="spacing">
+      <h1 className="text-center">This is stupid</h1>
       <Container>
         <Row className="justify-content-md-center">
           <Col>
