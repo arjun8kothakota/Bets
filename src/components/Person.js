@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { db } from '../firebase'
+
 import Button from 'react-bootstrap/Button'
 import { Container, Row , Col} from 'react-bootstrap'
 
@@ -6,13 +8,21 @@ const Person = (props) => {
     const [count, setCount] = useState(0)
 
     useEffect(() => {
-        const parsedCount = Number(localStorage.getItem(props.name) || 0)
-        setCount(parsedCount)
+        db.ref().child('users').on('value', snapshot => {
+            if (snapshot.val() != null) {
+                setCount(snapshot.val()[props.id]["count"])
+            }
+        })
     }, [])
 
-    useEffect(() => {
-        localStorage.setItem(props.name, count)
-    }, [count])
+    const add = (val) => {
+        db.ref('users/' + props.id).set({
+            id: props.id,
+            name: props.name,
+            count: count + val
+        })
+        setCount(count + val)
+    }
 
     return (
         <div>
@@ -21,25 +31,25 @@ const Person = (props) => {
             <Container fluid>
                 <Row className="justify-content-md-center">
                     <Col xs lg="6">
-                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => setCount(count + 1)}>Add 1</Button>
+                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => add(1)}>Add 1</Button>
                     </Col>
                     <Col md="1" />
                     <Col>
-                        <Button className="block" variant={ props.btnColor } size="lg" onClick={() => setCount(count + 5)}>Add 5</Button>
+                        <Button className="block" variant={ props.btnColor } size="lg" onClick={() => add(5)}>Add 5</Button>
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center mt-3">
                     <Col xs lg="6">
-                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => setCount(count + 10)}>Add 10</Button>
+                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => add(10)}>Add 10</Button>
                     </Col>
                     <Col md="1" />
                     <Col>
-                        <Button className="block" variant={ props.btnColor } size="lg" onClick={() => setCount(count - 1)}>Delete</Button>
+                        <Button className="block" variant={ props.btnColor } size="lg" onClick={() => add(-1)}>Delete</Button>
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center mt-3">
                     <Col xs lg="5">
-                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => setCount(0)}>Clear</Button>
+                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => add(-count)}>Clear</Button>
                     </Col>
                 </Row>
             </Container>

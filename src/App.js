@@ -13,11 +13,11 @@ function App() {
       <Container>
         <Row className="justify-content-md-center">
           <Col>
-            <Person name="Arjun" btnColor="outline-danger"/>
+            <Person name="Arjun" id="1" btnColor="outline-danger"/>
           </Col>
           <Col md="3" />
           <Col>
-            <Person name="Sneha" btnColor="outline-primary"/>
+            <Person name="Sneha" id="2" btnColor="outline-primary"/>
           </Col>
         </Row>
       </Container>
