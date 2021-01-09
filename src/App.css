@@ -4,4 +4,15 @@
 
 .block {
   width: 17vmin;
+  color: white;
+  border-color: white;
+}
+
+.big {
+  font-size: 4rem;
+}
+
+body {
+  background: linear-gradient(to right, #00a8ff 50%, #ff6b81 50%);
+  color: white;
 }

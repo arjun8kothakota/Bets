@@ -9,8 +9,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 function App() {
   return (
     <div className="spacing">
-      <h1 className="text-center">This is stupid</h1>
-      <Container>
+      <h1 className="text-center big">Who ended the call?</h1>
+      <Container className="mt-5">
         <Row className="justify-content-md-center">
           <Col>
             <Person name="Arjun" id="1" btnColor="outline-danger"/>
