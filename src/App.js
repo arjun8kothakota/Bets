@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Container className="p-0" fluid={true}>
           <Navbar className="border-bottom" bg="white" expand="lg">
-            <Navbar.Brand>The Betting Games</Navbar.Brand>
+            <Navbar.Brand>Bets</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
