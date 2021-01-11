@@ -16,8 +16,8 @@ function App() {
             <Navbar.Toggle aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Call War</Link>
-                <Link className="nav-link" to="/word">The Word</Link>
+                <Link className="nav-link" to="/Bets/call-war">Call War</Link>
+                <Link className="nav-link" to="/Bets/the-word">The Word</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
