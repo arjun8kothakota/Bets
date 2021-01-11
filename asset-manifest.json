@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/WhoEndedIt/static/css/main.2637c92e.chunk.css",
+    "main.js": "/WhoEndedIt/static/js/main.07fca0de.chunk.js",
+    "main.js.map": "/WhoEndedIt/static/js/main.07fca0de.chunk.js.map",
+    "runtime-main.js": "/WhoEndedIt/static/js/runtime-main.e9db2183.js",
+    "runtime-main.js.map": "/WhoEndedIt/static/js/runtime-main.e9db2183.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/WhoEndedIt/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.77a19e45.chunk.js": "/WhoEndedIt/static/js/2.77a19e45.chunk.js",
+    "static/js/2.77a19e45.chunk.js.map": "/WhoEndedIt/static/js/2.77a19e45.chunk.js.map",
+    "static/js/3.ccef5da8.chunk.js": "/WhoEndedIt/static/js/3.ccef5da8.chunk.js",
+    "static/js/3.ccef5da8.chunk.js.map": "/WhoEndedIt/static/js/3.ccef5da8.chunk.js.map",
+    "index.html": "/WhoEndedIt/index.html",
+    "static/css/2.ae9f1eb3.chunk.css.map": "/WhoEndedIt/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.2637c92e.chunk.css.map": "/WhoEndedIt/static/css/main.2637c92e.chunk.css.map",
+    "static/js/2.77a19e45.chunk.js.LICENSE.txt": "/WhoEndedIt/static/js/2.77a19e45.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e9db2183.js",
+    "static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.77a19e45.chunk.js",
+    "static/css/main.2637c92e.chunk.css",
+    "static/js/main.07fca0de.chunk.js"
+  ]
+}
