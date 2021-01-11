@@ -30,27 +30,31 @@ const Person = (props) => {
             <h2 className="text-center">{ count }</h2>
             <Container fluid>
                 <Row className="justify-content-md-center">
-                    <Col xs lg="6">
-                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => add(1)}>Add 1</Button>
-                    </Col>
-                    <Col md="1" />
-                    <Col>
-                        <Button className="block" variant={ props.btnColor } size="lg" onClick={() => add(5)}>Add 5</Button>
-                    </Col>
+                    <div className="flex-parent jc-center">
+                        <Col>
+                            <Button className="block mr-5" variant={ props.btnColor } size="lg" onClick={() => add(1)}>Add 1</Button>
+                        </Col>
+                        <Col>
+                            <Button className="block" variant={ props.btnColor } size="lg" onClick={() => add(5)}>Add 5</Button>
+                        </Col>
+                    </div>
                 </Row>
                 <Row className="justify-content-md-center mt-3">
-                    <Col xs lg="6">
-                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => add(10)}>Add 10</Button>
-                    </Col>
-                    <Col md="1" />
-                    <Col>
-                        <Button className="block" variant={ props.btnColor } size="lg" onClick={() => add(-1)}>Delete</Button>
-                    </Col>
+                    <div className="flex-parent jc-center">
+                        <Col>
+                            <Button className="block mr-5" variant={ props.btnColor } size="lg" onClick={() => add(10)}>Add 10</Button>
+                        </Col>
+                        <Col>
+                            <Button className="block" variant={ props.btnColor } size="lg" onClick={() => add(-1)}>Delete</Button>
+                        </Col>
+                    </div>
                 </Row>
                 <Row className="justify-content-md-center mt-3">
-                    <Col xs lg="5">
-                        <Button className="block ml-1" variant={ props.btnColor } size="lg" onClick={() => add(-count)}>Clear</Button>
-                    </Col>
+                    <div className="flex-parent jc-center">
+                        <Col>
+                            <Button className="block" variant={ props.btnColor } size="lg" onClick={() => add(-count)}>Clear</Button>
+                        </Col>
+                    </div>
                 </Row>
             </Container>
         </div>

@@ -1,26 +1,32 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Person from './components/Person'
-
 import './App.css';
-import { Container, Row, Col } from 'react-bootstrap'
+import CallWar from './components/CallWar'
+import Word from './components/Word'
+import { Container, Row, Col, Navbar, NavbarBrand, Nav } from 'react-bootstrap'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+
 
 
 function App() {
   return (
-    <div className="spacing">
-      <h1 className="text-center big">Who ended the call?</h1>
-      <Container className="mt-5">
-        <Row className="justify-content-md-center">
-          <Col>
-            <Person name="Arjun" id="1" btnColor="outline-danger"/>
-          </Col>
-          <Col md="3" />
-          <Col>
-            <Person name="Sneha" id="2" btnColor="outline-primary"/>
-          </Col>
-        </Row>
-      </Container>
+    <div>
+      <Router>
+        <Container className="p-0" fluid={true}>
+          <Navbar className="border-bottom" bg="white" expand="lg">
+            <Navbar.Brand>The Betting Games</Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbar-toggle" />
+            <Navbar.Collapse id="navbar-toggle">
+              <Nav className="ml-auto">
+                <Link className="nav-link" to="/">Call War</Link>
+                <Link className="nav-link" to="/word">The Word</Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+
+          <Route path="/" exact render={() => <CallWar />} />
+          <Route path="/word" exact render={() => <Word />} />
+        </Container>
+      </Router>
+      
     </div>
   );
 }
