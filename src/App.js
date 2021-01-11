@@ -16,14 +16,14 @@ function App() {
             <Navbar.Toggle aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/Bets/">Call War</Link>
-                <Link className="nav-link" to="/Bets/the-word">The Word</Link>
+                <Link className="nav-link" to="/">Call War</Link>
+                <Link className="nav-link" to="/the-word">The Word</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
 
-          <Route path="/Bets/" exact render={() => <CallWar />} />
-          <Route path="/Bets/the-word" exact render={() => <Word />} />
+          <Route path="/" exact render={() => <CallWar />} />
+          <Route path="/the-word" exact render={() => <Word />} />
         </Container>
       </Router>
       
