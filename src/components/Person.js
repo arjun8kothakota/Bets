@@ -16,6 +16,16 @@ const Person = (props) => {
     }, [])
 
     const add = (val) => {
+        let type = "added"
+        if (val < 0) {
+            type = "removed"
+        }
+        db.ref('users/3').set({
+            date: new Date().toLocaleDateString(),
+            points: Math.abs(val),
+            type: type,
+            user: props.name
+        })
         db.ref('users/' + props.id).set({
             id: props.id,
             name: props.name,
