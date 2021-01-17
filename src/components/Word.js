@@ -39,8 +39,8 @@ const Word = () => {
 
     const add = () => {
         if (count < 10) {
-            db.ref('users/' + 3).set({
-                id: 3,
+            db.ref('users/' + 4).set({
+                id: 4,
                 name: "Arjun",
                 count: count + 1
             })
@@ -50,8 +50,8 @@ const Word = () => {
 
     const del = () => {
         if (count > 0) {
-            db.ref('users/' + 3).set({
-                id: 3,
+            db.ref('users/' + 4).set({
+                id: 4,
                 name: "Arjun",
                 count: count - 1
             })
@@ -62,7 +62,7 @@ const Word = () => {
     useEffect(() => {
         db.ref().child('users').on('value', snapshot => {
             if (snapshot.val() != null) {
-                setCount(snapshot.val()[3]["count"])
+                setCount(snapshot.val()[4]["count"])
             }
         })
         startTimer()

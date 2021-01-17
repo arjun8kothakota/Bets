@@ -17,12 +17,14 @@ const Person = (props) => {
 
     const add = (val) => {
         let type = "added"
+        let today = new Date()
         if (val < 0) {
             type = "removed"
         }
         db.ref('users/3').set({
-            date: new Date().toLocaleDateString(),
+            date: (today.getMonth()+1) + '/' + today.getDate() + '/' + today.getFullYear(),
             points: Math.abs(val),
+            time: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
             type: type,
             user: props.name
         })

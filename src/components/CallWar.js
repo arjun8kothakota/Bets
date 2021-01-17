@@ -35,7 +35,7 @@ const CallWar = () => {
                     </Col>
                 </Row>
                 <Row className="justify-content-md-center mt-5">
-                    <h2>Last edited: { lastChanged['type'] } { lastChanged['points'] } { word } for { lastChanged['user'] } on { lastChanged['date'] } </h2>
+                    <h2>Last edited: { lastChanged['type'] } { lastChanged['points'] } { word } for { lastChanged['user'] } on { lastChanged['date'] } at { lastChanged['time'] } </h2>
                 </Row>
                 </Container>
             </div>
